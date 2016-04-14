@@ -100,6 +100,6 @@ module.exports = function(sequelize) {
             res.json(data);
           });
         });
-      }
+      },  
     };
     };
