@@ -7,6 +7,10 @@ angular.module('thesis.chatroom', ['luegg.directives', 'emoji', 'vkEmojiPicker',
     $scope.id = $rootScope.id;
     var chatId = $scope.id;
 
+    $scope.leavechat = function() {
+          UserService.removeUser($cookies.get('id'));
+    }
+
     var refreshUsers = function() {
       $http({
         method: 'GET',

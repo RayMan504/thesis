@@ -49,6 +49,11 @@
           chatId: chatId,
           userId: userId
         });
+      },
+      removeUser: function(id) {
+        return $http.delete('/leavechat', {
+          id: id
+        })
       }
     };
   });

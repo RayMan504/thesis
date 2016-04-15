@@ -100,6 +100,13 @@ module.exports = function(sequelize) {
             res.json(data);
           });
         });
-      },  
+      },
+      removeUser: function(req, res) {
+        userChatJct.destroy({
+          where:{
+            idUser: req.body.id
+          }
+        })
+      }  
     };
     };

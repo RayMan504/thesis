@@ -112,6 +112,8 @@ sequelize.sync().then(function(res) {
     app.route('/createMSG')
       .post(chatService.createMSG)
       .get(chatService.getMSG);
+    app.route('/leavechat')
+      .delete(chatService.removeUser);
 
 
 
